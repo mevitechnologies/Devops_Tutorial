@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Beginner-to-professional learning notes on DevOps, Linux, Git, and GitHub by Mevi Technologies.">
+  <title>DevOps, Linux, Git & GitHub | Mevi Technologies</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-smooth-scroll="true" tabindex="0">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#top"><img class="mevi-logo" src="https://www.mevitechnologies.com/static/img/MeviLOGO.png" alt="Mevi Technologies logo"><span class="brand-caption">Mevi Technologies<small>TRAINING | DEVELOPMENT | CONSULTANCY</small></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#devops">DevOps</a></li>
+        <li class="nav-item"><a class="nav-link" href="#linux">Linux & Bash</a></li>
+        <li class="nav-item"><a class="nav-link" href="#git">Git</a></li>
+        <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li><li class="nav-item"><a class="nav-link" href="#advanced">Advanced</a></li><li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+        <li class="nav-item"><a class="nav-link" href="#project">Hands-on project</a></li>
+        <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="container py-5">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-8">
+        <span class="eyebrow"><i class="bi bi-mortarboard"></i> Practical learning path</span>
+        <h1>DevOps, Linux, <span>Git & GitHub</span></h1>
+        <p class="lead">Start from the basics, then progress to advanced Git, CI/CD, secure automation, release strategies and production-minded DevOps.</p>
+        <p class="hero-note"><i class="bi bi-lightbulb"></i> Learn the “why”, understand the command, practise it safely, and know how to recover when something goes wrong.</p>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <a class="btn btn-primary btn-lg" href="#devops">Start learning <i class="bi bi-arrow-down-right"></i></a>
+          <a class="btn btn-outline-light btn-lg" href="#project">Build the project</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="hero-card">
+          <div class="terminal-top"><span></span><span></span><span></span><b>terminal</b></div>
+          <pre><code>$ git status
+On branch main
+nothing to commit, working tree clean
+
+$ git log --oneline
+a13f92b Add project README
+b7c11d0 Create starter page</code></pre>
+          <div class="hero-card-footer"><i class="bi bi-check-circle-fill"></i> Every change has a history</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="learning-strip row g-3">
+    <div class="col-md-3"><div><i class="bi bi-diagram-3"></i><b>Concepts</b><span>Understand the big picture</span></div></div>
+    <div class="col-md-3"><div><i class="bi bi-terminal"></i><b>Commands</b><span>Copy, run, observe, explain</span></div></div>
+    <div class="col-md-3"><div><i class="bi bi-git"></i><b>Version control</b><span>Track and recover changes</span></div></div>
+    <div class="col-md-3"><div><i class="bi bi-cloud-arrow-up"></i><b>Publish</b><span>Share work on GitHub</span></div></div>
+  </div>
+</div>
+
+<main class="container content-wrap">
+  <div class="row g-4">
+    <aside class="col-lg-3">
+      <div class="toc card sticky-lg-top" id="pageNav">
+        <div class="card-body">
+          <h2 class="h6 text-uppercase fw-bold">On this page</h2>
+          <a href="#roadmap">Learning roadmap</a>
+          <a href="#devops">1. Introduction to DevOps</a>
+          <a href="#lifecycle">2. DevOps lifecycle & culture</a>
+          <a href="#ci-cd">3. Automation, CI/CD</a>
+          <a href="#linux">4. Linux & Git Bash</a>
+          <a href="#git">5. Git fundamentals</a>
+          <a href="#recovery">6. Compare & undo changes</a>
+          <a href="#github">7. GitHub collaboration</a>
+          <a href="#project">8. Hands-on project</a>
+          <a href="#troubleshoot">9. Troubleshooting</a>
+          <a href="#glossary">10. Glossary</a>
+          <a href="#quiz">Knowledge check</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="col-lg-9">
+      <section id="roadmap" class="section-block">
+        <div class="section-kicker">Before we begin</div><h2>Your learning roadmap</h2>
+        <p class="section-intro">Follow the order below. Each skill supports the next one, so do not rush straight to GitHub without understanding your local files and Git history.</p>
+        <div class="roadmap">
+          <div><span>01</span><section><b>Understand DevOps</b><p>Learn how development and operations collaborate to deliver software reliably.</p></section></div>
+          <div><span>02</span><section><b>Become comfortable in a terminal</b><p>Navigate folders, inspect files, search text, understand environment variables and test connectivity.</p></section></div>
+          <div><span>03</span><section><b>Use Git locally</b><p>Record meaningful snapshots, create branches, compare changes and recover safely.</p></section></div>
+          <div><span>04</span><section><b>Collaborate through GitHub</b><p>Publish a repository, document it and understand how changes move between local and remote copies.</p></section></div>
+          <div><span>05</span><section><b>Complete a real deliverable</b><p>Build a web page, track at least three changes, push it to GitHub and write a useful README.</p></section></div>
+        </div>
+        <div class="callout info"><i class="bi bi-info-circle"></i><div><b>What “professional” means here</b><p>It does not mean memorising commands. It means understanding where a command acts, checking the result, writing readable history, protecting work, and explaining your workflow to another developer.</p></div></div>
+      </section>
+
+      <section id="devops" class="section-block">
+        <div class="section-kicker">Module 01</div><h2>Introduction to DevOps</h2>
+        <p class="section-intro">DevOps is a way of working that brings software development and IT operations together so teams can deliver changes faster, more safely and more consistently. It combines people, processes, automation, measurement and continuous feedback across the software delivery lifecycle.</p>
+        <figure class="devops-visual devops-visual-primary">
+          <img src="assets/devops-lifecycle-simple.png" alt="DevOps infinity loop showing plan, code, build, test, release, deploy, operate and monitor" loading="lazy">
+          <figcaption><strong>DevOps lifecycle at a glance.</strong> Plan, code, build, test, release, deploy, operate and monitor form a continuous improvement loop.</figcaption>
+        </figure>
+        <div class="callout info"><i class="bi bi-lightbulb"></i><div><b>Key idea</b><p>DevOps is not a single tool or job title. It is a collaborative culture supported by automation, shared ownership, fast feedback and reliable processes.</p></div></div>
+        <div class="analogy">
+          <div class="analogy-icon"><i class="bi bi-building-gear"></i></div>
+          <div><span>Real-life analogy</span><h3>A restaurant that serves reliably</h3><p>Chefs create a dish (development), the kitchen team prepares the station and equipment (operations), quality checks verify the dish, and customer feedback improves the next version. If these groups never communicate, orders are late and mistakes increase. DevOps connects the whole process.</p></div>
+        </div>
+        <h3>Development vs Operations vs DevOps</h3>
+        <div class="table-responsive"><table class="table comparison align-middle">
+          <thead><tr><th>Area</th><th>Main concern</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Development (Dev)</td><td>Build features and fix defects</td><td>Adding a login page</td></tr>
+            <tr><td>Operations (Ops)</td><td>Run, monitor and maintain the service</td><td>Keeping the application available</td></tr>
+            <tr><td>DevOps</td><td>Shared ownership, automation and feedback across delivery</td><td>Automatically test a change and deploy it through a controlled pipeline</td></tr>
+          </tbody>
+        </table></div>
+        <h3>Why teams adopt DevOps</h3>
+        <div class="row g-3">
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-speedometer2"></i><b>Shorter feedback loops</b><p>Find problems closer to the moment they were introduced.</p></div></div>
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-shield-check"></i><b>More reliable releases</b><p>Use repeatable tests and deployment steps instead of relying on memory.</p></div></div>
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-people"></i><b>Shared responsibility</b><p>Teams collaborate rather than throwing work over a wall.</p></div></div>
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-arrow-repeat"></i><b>Continuous improvement</b><p>Monitoring and user feedback inform the next change.</p></div></div>
+        </div>
+        <h3>DevOps is not just a tool</h3>
+        <p>Installing Git, Docker or a CI server does not automatically create DevOps. Tools support the work, but culture, clear processes, useful automation, measurable outcomes and learning from incidents matter just as much.</p>
+        <h3>DevOps tools and the wider ecosystem</h3>
+        <p>Real-world DevOps uses different tools for different jobs. A team may choose one tool from each category—or use a managed platform that combines several capabilities. Tool selection depends on team skills, existing systems, security needs, cost and operational complexity.</p>
+        <div class="tool-image-grid">
+          <figure class="devops-visual tool-visual-card">
+            <img src="assets/devops-toolchain-infinity.png" alt="DevOps infinity lifecycle connected to GitLab, Git, AWS, Docker, Kubernetes, Azure, Jenkins, Grafana, Ansible, Chef and Gradle" loading="lazy">
+            <figcaption><strong>Tools mapped to the lifecycle.</strong> Examples include Git and GitLab for source control, Gradle and Nexus for build and artifact management, Jenkins for automation, Docker and Kubernetes for containers, AWS and Azure for cloud, Ansible and Chef for configuration, and Grafana for observability.</figcaption>
+          </figure>
+          <figure class="devops-visual tool-visual-card">
+            <img src="assets/devops-tools-ecosystem.png" alt="DevOps tool ecosystem infographic showing planning, collaboration, source control, CI/CD, cloud, deployment and monitoring tools" loading="lazy">
+            <figcaption><strong>A broader DevOps ecosystem.</strong> Planning and collaboration tools (Jira, Trello, Slack), CI/CD tools (Jenkins, TeamCity, CircleCI), cloud platforms (AWS, Azure, Google Cloud), deployment and infrastructure tools (Terraform, Ansible, Puppet), and monitoring tools (Prometheus, Grafana, New Relic, Nagios) support different parts of delivery.</figcaption>
+          </figure>
+        </div>
+        <div class="callout info"><i class="bi bi-diagram-3"></i><div><b>How the tools work together</b><p>A developer pushes code to GitHub. A CI workflow runs tests and security checks, builds a versioned artifact or container image, and deploys it to a test environment. After approval, the same version can be promoted to production. Logs, metrics and alerts help the team detect problems and improve the next release.</p></div></div>
+        <h3>Modern DevOps: practices to know</h3>
+        <div class="row g-3 modern-practices">
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-shield-lock"></i><b>DevSecOps</b><p>Integrate dependency, secret, code and container scanning into the delivery workflow; keep credentials out of source code.</p></div></div>
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-boxes"></i><b>Infrastructure as Code</b><p>Describe infrastructure in version-controlled configuration using tools such as Terraform, then review and apply changes deliberately.</p></div></div>
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-box-seam"></i><b>Containers and orchestration</b><p>Package applications consistently with Docker and manage rollout, scaling and service discovery with Kubernetes where appropriate.</p></div></div>
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-graph-up-arrow"></i><b>Observability and SRE</b><p>Use metrics, logs and traces to understand service health; define service-level indicators and objectives for important user journeys.</p></div></div>
+        </div>
+        <div class="callout warning"><i class="bi bi-exclamation-triangle"></i><div><b>Important distinction</b><p>DevOps is not the same as “developers do operations” or “operations disappear.” It is a collaborative approach with shared goals and clear ownership.</p></div></div><i class="bi bi-exclamation-triangle"></i><div><b>Important distinction</b><p>DevOps is not the same as “developers do operations” or “operations disappear.” It is a collaborative approach with shared goals and clear ownership.</p></div></div>
+      </section>
+
+      <section id="lifecycle" class="section-block">
+        <div class="section-kicker">Module 02</div><h2>The DevOps lifecycle and culture</h2>
+        <p class="section-intro">The lifecycle is a repeating loop, not a one-time waterfall. Teams plan, build, test, release, deploy, operate, monitor and use what they learn to improve the next iteration.</p>
+        <div class="lifecycle">
+          <div><span>1</span><i class="bi bi-card-checklist"></i><b>Plan</b><small>Requirements, priorities, work items</small></div>
+          <div><span>2</span><i class="bi bi-code-slash"></i><b>Code</b><small>Write code, review, version control</small></div>
+          <div><span>3</span><i class="bi bi-bug"></i><b>Build & Test</b><small>Compile/package, automated checks</small></div>
+          <div><span>4</span><i class="bi bi-box-seam"></i><b>Release</b><small>Prepare a version for deployment</small></div>
+          <div><span>5</span><i class="bi bi-cloud-upload"></i><b>Deploy</b><small>Deliver to an environment</small></div>
+          <div><span>6</span><i class="bi bi-activity"></i><b>Operate & Monitor</b><small>Health, logs, performance, feedback</small></div>
+        </div>
+        <h3>What DevOps culture looks like in practice</h3>
+        <ul class="rich-list">
+          <li><b>Collaboration:</b> developers, testers, security and operations discuss risks early.</li>
+          <li><b>Automation:</b> repeatable tasks are scripted to reduce manual errors.</li>
+          <li><b>Small batches:</b> ship smaller changes that are easier to understand and roll back.</li>
+          <li><b>Shared ownership:</b> the team cares about how software behaves after release.</li>
+          <li><b>Blameless learning:</b> investigate why a failure occurred and improve the system instead of only blaming a person.</li>
+          <li><b>Measurement:</b> track delivery speed, change failure rate, recovery time and service reliability.</li>
+          <li><b>Security from the start:</b> protect secrets, review dependencies and include security checks early.</li>
+        </ul>
+        <h3>Common DevOps tools by purpose</h3>
+        <div class="table-responsive"><table class="table align-middle">
+          <thead><tr><th>Purpose</th><th>Examples</th><th>What the category does</th></tr></thead>
+          <tbody>
+            <tr><td>Version control</td><td>Git, GitHub</td><td>Tracks source changes and supports collaboration.</td></tr>
+            <tr><td>CI/CD</td><td>GitHub Actions, Jenkins, GitLab CI/CD</td><td>Runs checks and delivery steps automatically.</td></tr>
+            <tr><td>Containers</td><td>Docker</td><td>Packages an application with its runtime dependencies.</td></tr>
+            <tr><td>Orchestration</td><td>Kubernetes</td><td>Coordinates containerised workloads across machines.</td></tr>
+            <tr><td>Infrastructure as Code</td><td>Terraform, Ansible</td><td>Defines or configures infrastructure through repeatable files and automation.</td></tr>
+            <tr><td>Observability</td><td>Prometheus, Grafana, OpenTelemetry</td><td>Helps teams understand system health through metrics, dashboards, traces and logs.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section id="ci-cd" class="section-block">
+        <div class="section-kicker">Module 03</div><h2>Automation, CI, Continuous Delivery and Deployment</h2>
+        <p>Automation means a repeatable task is performed by a script or tool with minimal manual effort. Examples include running tests, checking formatting, creating a build, packaging files, scanning dependencies and deploying an approved release.</p>
+        <div class="pipeline" aria-label="Example CI/CD pipeline">
+          <div><i class="bi bi-git"></i><b>Commit</b><small>Developer pushes code</small></div><i class="bi bi-arrow-right"></i>
+          <div><i class="bi bi-check2-square"></i><b>CI checks</b><small>Lint, test, build</small></div><i class="bi bi-arrow-right"></i>
+          <div><i class="bi bi-box"></i><b>Package</b><small>Versioned artifact</small></div><i class="bi bi-arrow-right"></i>
+          <div><i class="bi bi-cloud-check"></i><b>Deploy</b><small>Staging or production</small></div>
+        </div>
+        <h3>Continuous Integration (CI)</h3>
+        <p>Developers integrate small changes into a shared branch frequently. Each change triggers automated checks such as unit tests, linting and a build. CI aims to discover integration problems early.</p>
+        <p><b>Example:</b> a developer pushes a change to a website. GitHub Actions runs a workflow that checks whether required files exist and whether the project passes its tests. A failed check gives the team a signal to fix the issue before merging.</p>
+        <h3>Continuous Delivery</h3>
+        <p>Every accepted change is built, tested and kept in a release-ready state. Production deployment may still require a human approval or scheduled release decision.</p>
+        <h3>Continuous Deployment</h3>
+        <p>Every change that passes the required automated pipeline is automatically released to production, without a separate manual release approval. This requires strong tests, monitoring, security controls and a safe recovery strategy.</p>
+        <div class="table-responsive"><table class="table comparison align-middle">
+          <thead><tr><th>Term</th><th>Automated checks?</th><th>Production release</th></tr></thead>
+          <tbody>
+            <tr><td>CI</td><td>Yes—integrate and validate changes</td><td>Not implied by CI alone</td></tr>
+            <tr><td>Continuous Delivery</td><td>Yes—pipeline keeps changes release-ready</td><td>Often requires a person to approve the release</td></tr>
+            <tr><td>Continuous Deployment</td><td>Yes—passing changes flow through the pipeline</td><td>Automatically deployed to production</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout info"><i class="bi bi-lightbulb"></i><div><b>Remember it this way</b><p>CI asks, “Does this change integrate and pass checks?” Continuous Delivery asks, “Could we release it safely now?” Continuous Deployment says, “If it passes the required controls, release it automatically.”</p></div></div>
+        <h3>Beginner-safe automation checklist</h3>
+        <ul class="rich-list">
+          <li>Run the same checks locally and in the pipeline where practical.</li>
+          <li>Never store passwords, API keys or tokens in source code or public repositories.</li>
+          <li>Keep build and test steps repeatable; document required versions and commands.</li>
+          <li>Use a staging environment for realistic checks when available.</li>
+          <li>Monitor releases and prepare a rollback or forward-fix plan.</li>
+        </ul>
+      </section>
+
+      <section id="linux" class="section-block">
+        <div class="section-kicker">Module 04</div><h2>Linux and Git Bash essentials</h2>
+        <p class="section-intro">A shell is a text-based interface where you type commands. Linux servers commonly provide a shell; Git Bash provides a Bash-like terminal on Windows. macOS also provides a Unix-style terminal. Commands can differ between shells and operating systems, so read errors and check your environment.</p>
+        <div class="callout warning"><i class="bi bi-shield-exclamation"></i><div><b>Safe command habit</b><p>Before deleting or overwriting files, run <code>pwd</code> and <code>ls</code> to confirm where you are. Practise destructive commands only in a test folder. Never run a command you do not understand with administrator privileges.</p></div></div>
+        <h3>1. Navigation</h3>
+        <div class="command"><div class="command-head"><b>Command</b><span>What it does</span></div><pre><code>pwd                 # show current directory
+ls                  # list files and folders
+ls -la              # include hidden files and details
+cd projects         # enter a folder named projects
+cd ..               # move up one directory
+cd ~                # go to your home directory
+cd -                # return to the previous directory</code></pre></div>
+        <p><b>Example:</b> if <code>pwd</code> prints <code>/home/megha</code> and you run <code>cd projects</code>, the shell moves into <code>/home/megha/projects</code> if that folder exists.</p>
+        <h3>2. File and directory operations</h3>
+        <div class="command"><div class="command-head"><b>Command</b><span>What it does</span></div><pre><code>mkdir devops-practice       # create a directory
+cd devops-practice
+touch index.html            # create an empty file (if supported)
+cp index.html index-copy.html  # copy a file
+mv index-copy.html backup.html # rename/move a file
+cat index.html              # print file contents
+less index.html             # read a file page by page
+file index.html             # identify file type on many systems
+rm backup.html              # delete a file; usually no recycle bin</code></pre></div>
+        <p>On Windows Git Bash, <code>touch</code>, <code>cat</code>, <code>cp</code>, <code>mv</code> and <code>rm</code> are usually available. On every platform, verify paths before changing or deleting anything.</p>
+        <h3>3. Search for files and text</h3>
+        <div class="command"><pre><code>find . -name "*.html"              # find HTML files under current folder
+grep "DevOps" README.md            # find matching text in a file
+grep -n "DevOps" README.md         # show matching line numbers
+grep -Rni "TODO" .                 # search recursively, case-insensitive
+history                            # show recent commands
+clear                              # clear terminal display</code></pre></div>
+        <p><code>.</code> means “the current directory.” In <code>find . -name "*.html"</code>, the quotation marks protect the wildcard from being expanded too early by the shell.</p>
+        <h3>4. Environment variables</h3>
+        <p>An environment variable is a named value available to a process. It can store configuration such as an environment name or a path to a tool. Do not place secrets in a public README or print them into logs.</p>
+        <div class="command"><pre><code>echo "$HOME"                    # home directory in Bash
+echo "$PATH"                    # folders searched for commands
+export APP_ENV=development      # set variable in this Bash session
+echo "$APP_ENV"                 # print its value
+unset APP_ENV                   # remove it from this session</code></pre></div>
+        <p>These examples use Bash syntax. Windows Command Prompt and PowerShell use different syntax. A variable set this way is generally temporary for that shell session unless you configure it elsewhere.</p>
+        <h3>5. Basic networking and diagnostics</h3>
+        <div class="command"><pre><code>ping example.com                # test reachability (may be blocked)
+curl -I https://example.com     # request response headers
+curl https://example.com        # request page content
+ip addr                         # show IP interfaces on many Linux systems
+ip route                        # show routing table on many Linux systems
+nslookup example.com            # query DNS (if installed)
+ssh user@server.example.com     # connect to a server (with permission)</code></pre></div>
+        <p><b>Interpretation:</b> a failed ping does not prove a website is down; firewalls may block ping. <code>curl -I</code> returning an HTTP status such as <code>200</code>, <code>301</code> or <code>404</code> tells you the server responded, but the meaning depends on the status code.</p>
+        <h3>6. Exit codes and command chaining</h3>
+        <div class="command"><pre><code>echo $?             # exit code of the previous command in Bash
+mkdir output && cd output
+command-one || echo "The previous command failed"
+command-one ; command-two</code></pre></div>
+        <ul class="rich-list">
+          <li><code>&&</code> runs the next command only if the previous command succeeds.</li>
+          <li><code>||</code> runs the next command if the previous command fails.</li>
+          <li><code>;</code> runs the next command regardless of the previous command's result.</li>
+          <li>Exit code <code>0</code> conventionally means success; a non-zero code signals an error or other condition.</li>
+        </ul>
+        <div class="practice-box"><h4><i class="bi bi-keyboard"></i> Terminal practice</h4><ol><li>Create a folder called <code>devops-lab</code>.</li><li>Inside it, create <code>notes.txt</code> and add a few lines using a text editor.</li><li>Use <code>cat</code> to display it and <code>grep</code> to search one word.</li><li>Use <code>find</code> to locate the file.</li><li>Run <code>pwd</code> and explain the path you see.</li></ol></div>
+      </section>
+
+      <section id="git" class="section-block">
+        <div class="section-kicker">Module 05</div><h2>Git: the foundation of version control</h2>
+        <p class="section-intro">Git is a distributed version-control system. It records project history as commits, lets you experiment on branches, compare versions and collaborate without relying on a single shared folder.</p>
+        <div class="analogy">
+          <div class="analogy-icon"><i class="bi bi-clock-history"></i></div>
+          <div><span>Real-life analogy</span><h3>Save points in a game</h3><p>A commit is like a named save point. A branch is a separate path where you try an idea. You can compare paths, combine successful work, and return to an earlier state if you need to—provided you choose the appropriate recovery command.</p></div>
+        </div>
+        <h3>Git's three main local areas</h3>
+        <div class="git-areas">
+          <div><span>1</span><b>Working directory</b><p>Your files as you edit them.</p></div><i class="bi bi-arrow-right"></i>
+          <div><span>2</span><b>Staging area</b><p>The exact changes selected for the next commit.</p></div><i class="bi bi-arrow-right"></i>
+          <div><span>3</span><b>Repository history</b><p>Commits that record snapshots and messages.</p></div>
+        </div>
+        <h3>1. Configure Git once per user account</h3>
+        <div class="command"><pre><code>git --version
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global --list</code></pre></div>
+        <p>Use an email address you are comfortable associating with commits. Git configuration identifies the author metadata; it is not your GitHub password. Never configure a password into your Git username or commit history.</p>
+        <h3>2. Create or start a repository</h3>
+        <div class="command"><pre><code>mkdir my-first-webpage
+cd my-first-webpage
+git init
+git status</code></pre></div>
+        <p><code>git init</code> creates a local Git repository in the current folder. <code>git status</code> tells you the current branch and which files are new, modified, staged or untracked.</p>
+        <h3>3. Stage and commit changes</h3>
+        <div class="command"><pre><code>git status
+git add index.html              # stage one file
+git add README.md               # stage another file
+git diff                       # unstaged changes
+git diff --staged              # changes staged for next commit
+git commit -m "Create starter webpage"
+git log --oneline              # compact commit history</code></pre></div>
+        <p>A commit should represent one understandable unit of work. Good messages describe the change, for example <code>Add contact section to homepage</code>. Avoid messages such as <code>stuff</code>, <code>final</code> or <code>changes</code>.</p>
+        <h3>4. Branches: work without disturbing the main line</h3>
+        <div class="command"><pre><code>git branch                         # list local branches
+git switch -c feature/about-section # create and switch to a branch
+# edit index.html
+git status
+git add index.html
+git commit -m "Add about section"
+git switch main                    # return to main</code></pre></div>
+        <p>A branch is a movable name pointing to a line of commits. Use a branch for a focused feature or fix. Before switching branches, check your working tree and understand what will happen to any uncommitted edits.</p>
+        <h3>5. Merge a branch</h3>
+        <div class="command"><pre><code>git switch main
+git merge feature/about-section
+git log --oneline --graph --decorate --all</code></pre></div>
+        <p>Merge brings the changes from one branch into the current branch. Git may create a merge commit or perform a fast-forward. If both branches changed the same lines incompatibly, Git can report a conflict that must be resolved manually.</p>
+        <h3>6. Understand the most useful inspection commands</h3>
+        <div class="table-responsive"><table class="table align-middle">
+          <thead><tr><th>Command</th><th>Question it answers</th></tr></thead>
+          <tbody>
+            <tr><td><code>git status</code></td><td>What has changed and what is staged?</td></tr>
+            <tr><td><code>git diff</code></td><td>What changed but is not staged?</td></tr>
+            <tr><td><code>git diff --staged</code></td><td>What exactly will the next commit include?</td></tr>
+            <tr><td><code>git log --oneline --graph --all</code></td><td>How does the commit history fit together?</td></tr>
+            <tr><td><code>git show HEAD</code></td><td>What did the latest commit record?</td></tr>
+            <tr><td><code>git blame index.html</code></td><td>Which commit last changed each line?</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section id="recovery" class="section-block">
+        <div class="section-kicker">Module 06</div><h2>Comparing, reverting and recovering changes</h2>
+        <p>Recovery commands are powerful. First inspect the repository with <code>git status</code>, then select the command that matches the state of the work. If the changes matter, make a backup before attempting recovery.</p>
+        <h3>Common recovery choices</h3>
+        <div class="table-responsive"><table class="table align-middle recovery-table">
+          <thead><tr><th>Situation</th><th>Command</th><th>Effect / caution</th></tr></thead>
+          <tbody>
+            <tr><td>Unstage a file but keep edits</td><td><code>git restore --staged index.html</code></td><td>Removes it from staging; edits remain in the working tree.</td></tr>
+            <tr><td>Discard unstaged edits to one tracked file</td><td><code>git restore index.html</code></td><td>Overwrites those edits with the index version. Uncommitted work can be lost.</td></tr>
+            <tr><td>Create a new commit that reverses a prior commit</td><td><code>git revert COMMIT_ID</code></td><td>Usually the safer public-history choice because it preserves history.</td></tr>
+            <tr><td>Move current branch pointer to an older commit</td><td><code>git reset</code> (options matter)</td><td>Can rewrite local history or discard changes. Learn the mode before using it.</td></tr>
+            <tr><td>Find recent HEAD positions</td><td><code>git reflog</code></td><td>Shows recent local reference movements and may help recover a commit.</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout danger"><i class="bi bi-exclamation-octagon"></i><div><b>Do not blindly run destructive commands</b><p>Avoid copying commands such as <code>git reset --hard</code> or <code>git clean -fd</code> from the internet without understanding them. They can permanently remove uncommitted work or untracked files. If a commit has already been shared, prefer discussing and using <code>git revert</code> rather than rewriting shared history.</p></div></div>
+        <h3>Merge conflict: what it means</h3>
+        <p>A conflict occurs when Git cannot safely decide how to combine competing edits. Git marks the affected file with conflict markers:</p>
+        <div class="command"><pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+The version currently in this branch.
+=======
+The incoming version from the branch being merged.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/about-section</code></pre></div>
+        <p>Open the file, decide what the final content should be, remove the conflict markers, save it, and inspect the result. Then run <code>git add filename</code> and finish the merge with a commit if Git requires one. Do not leave markers in the final code.</p>
+      </section>
+
+      <section id="github" class="section-block">
+        <div class="section-kicker">Module 07</div><h2>GitHub: remote repositories and collaboration</h2>
+        <p>Git is the version-control tool. GitHub is a hosted platform that stores Git repositories and adds collaboration features such as pull requests, issue tracking, code review, access control and automation workflows.</p>
+        <h3>Local and remote: how the pieces connect</h3>
+        <div class="remote-flow">
+          <div><i class="bi bi-laptop"></i><b>Local repository</b><small>Files, branches, commits</small></div>
+          <div class="remote-arrows"><span>push <i class="bi bi-arrow-right"></i></span><span><i class="bi bi-arrow-left"></i> fetch / pull</span></div>
+          <div><i class="bi bi-github"></i><b>GitHub repository</b><small>Remote copy, collaboration, PRs</small></div>
+        </div>
+        <h3>Key vocabulary</h3>
+        <ul class="rich-list">
+          <li><b>Remote:</b> a named connection to another repository, commonly called <code>origin</code>.</li>
+          <li><b>Clone:</b> download a repository and its history to your machine.</li>
+          <li><b>Push:</b> send local commits to a remote repository.</li>
+          <li><b>Fetch:</b> retrieve remote updates without automatically merging them into the current branch.</li>
+          <li><b>Pull:</b> fetch remote updates and integrate them into the current branch, according to the configured strategy.</li>
+          <li><b>Fork:</b> create your own GitHub-side copy of another user's repository, commonly used for open-source contributions.</li>
+          <li><b>Pull request (PR):</b> propose changes so others can review, discuss and merge them.</li>
+          <li><b>README:</b> the project introduction and usage guide, commonly written in Markdown.</li>
+          <li><b>.gitignore:</b> lists intentionally untracked files Git should ignore, such as temporary files or local environment configuration.</li>
+        </ul>
+        <h3>Publish an existing local repository</h3>
+        <ol class="numbered-steps">
+          <li>Sign in to GitHub and create a new empty repository. If you already have a local README, avoid generating a second initial README on GitHub for this first push to keep the setup simple.</li>
+          <li>Copy the repository URL from GitHub. Use the URL shown for your own repository; do not type a guessed URL.</li>
+          <li>Connect the local repository and check the remote:</li>
+        </ol>
+        <div class="command"><pre><code>git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git remote -v
+git branch -M main
+git push -u origin main</code></pre></div>
+        <p>Replace the example URL with your actual repository URL. HTTPS authentication may require a browser sign-in or credential manager; your GitHub account password is generally not accepted as a Git HTTPS password. Follow GitHub's current authentication guidance.</p>
+        <h3>Clone a repository onto a new computer</h3>
+        <div class="command"><pre><code>git clone https://github.com/OWNER/REPOSITORY.git
+cd REPOSITORY
+git status</code></pre></div>
+        <h3>Daily collaboration workflow</h3>
+        <div class="workflow-list">
+          <div><span>1</span><p><b>Sync first</b><br>Check the branch and pull relevant updates before starting.</p></div>
+          <div><span>2</span><p><b>Create a focused branch</b><br>Use a descriptive name such as <code>feature/contact-section</code>.</p></div>
+          <div><span>3</span><p><b>Make small commits</b><br>Inspect diffs, stage only related files and write clear commit messages.</p></div>
+          <div><span>4</span><p><b>Push the branch</b><br>Share your commits on GitHub for review.</p></div>
+          <div><span>5</span><p><b>Open a pull request</b><br>Explain the change, attach screenshots when useful, and respond to feedback.</p></div>
+          <div><span>6</span><p><b>Merge and clean up</b><br>After approval and checks, merge according to team rules and remove obsolete branches.</p></div>
+        </div>
+        <h3>Write a useful README</h3>
+        <p>A README should help a new person understand the project without asking you basic questions. Include:</p>
+        <ul class="rich-list">
+          <li>Project name and one-sentence purpose.</li><li>Features or pages.</li><li>Tools and technologies used.</li>
+          <li>Prerequisites and installation/setup instructions.</li><li>How to run or view the project.</li><li>Folder structure, screenshots and known limitations.</li><li>Contribution guidance and licence, if relevant.</li>
+        </ul>
+        <h3>Repository hygiene and security</h3>
+        <ul class="rich-list">
+          <li>Do not commit passwords, API keys, access tokens, private keys, database dumps or personal data.</li>
+          <li>Add local-only files to <code>.gitignore</code>, but remember: ignoring a file does not remove it if it is already tracked.</li>
+          <li>Use meaningful commit messages and keep pull requests focused.</li>
+          <li>Review the file list before pushing, especially when a repository is public.</li>
+          <li>Use branch protection and required checks for team repositories where appropriate.</li>
+        </ul>
+      </section>
+
+      <section id="project" class="section-block">
+        <div class="section-kicker">Capstone lab</div><h2>Hands-on activity: publish a web page to GitHub</h2>
+        <p class="section-intro">Outcome: a GitHub repository containing a simple webpage, a meaningful commit history and a README that explains the project.</p>
+        <div class="project-outcome"><i class="bi bi-trophy"></i><div><b>Definition of done</b><p>Your repository is accessible at the intended visibility level, contains <code>index.html</code>, <code>README.md</code> and <code>.gitignore</code>, has at least three purposeful commits, and the README explains how to view or run the page.</p></div></div>
+        <h3>Step 1 — Create the project folder</h3>
+        <div class="command"><pre><code>mkdir mevi-devops-starter
+cd mevi-devops-starter
+git init</code></pre></div>
+        <h3>Step 2 — Create <code>index.html</code></h3>
+        <p>Create a file named <code>index.html</code> in the folder and paste this starter page. Open it in a browser by double-clicking the file, or use a local development server if your setup requires one.</p>
+        <div class="code-title"><span>index.html</span><button class="copy-btn" data-copy="html-example"><i class="bi bi-clipboard"></i> Copy code</button></div>
+        <pre class="code-block"><code id="html-example">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;My DevOps Starter Project&lt;/title&gt;
+  &lt;style&gt;
+    body { font-family: Arial, sans-serif; max-width: 760px;
+           margin: 3rem auto; padding: 0 1rem; line-height: 1.6; }
+    header { background: #102a43; color: white; padding: 2rem;
+             border-radius: 14px; }
+    a { color: #087e8b; }
+    .card { border: 1px solid #d9e2ec; border-radius: 12px;
+            padding: 1rem; margin-top: 1rem; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My DevOps Learning Journey&lt;/h1&gt;
+    &lt;p&gt;Learning to build, track, test and share software.&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;section class="card"&gt;
+      &lt;h2&gt;What I am learning&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Terminal basics&lt;/li&gt;
+        &lt;li&gt;Git version control&lt;/li&gt;
+        &lt;li&gt;GitHub collaboration&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+    &lt;section class="card"&gt;
+      &lt;h2&gt;Next milestone&lt;/h2&gt;
+      &lt;p&gt;Make a change, commit it, and publish the repository.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <h3>Step 3 — Check, stage and commit the first version</h3>
+        <div class="command"><pre><code>git status
+git add index.html
+git diff --staged
+git commit -m "Create starter learning webpage"</code></pre></div>
+        <h3>Step 4 — Make a second change</h3>
+        <p>Edit the page: add a new section called “My goals” with two goals. Before staging, inspect the change:</p>
+        <div class="command"><pre><code>git status
+git diff
+git add index.html
+git diff --staged
+git commit -m "Add learning goals section"</code></pre></div>
+        <h3>Step 5 — Practise a branch</h3>
+        <div class="command"><pre><code>git switch -c feature/contact-section
+# Add a contact or resources section to index.html
+git diff
+git add index.html
+git commit -m "Add resources section"
+git switch main
+git merge feature/contact-section</code></pre></div>
+        <h3>Step 6 — Add a README</h3>
+        <p>Create <code>README.md</code> and document the project. You can use this starter outline:</p>
+        <div class="code-title"><span>README.md</span><button class="copy-btn" data-copy="readme-example"><i class="bi bi-clipboard"></i> Copy outline</button></div>
+        <pre class="code-block"><code id="readme-example"># My DevOps Starter Project
+
+A small webpage created while learning Linux, Git and GitHub.
+
+## Features
+- Responsive, simple HTML page
+- Learning goals and resources
+- Version history managed with Git
+
+## Technologies
+- HTML
+- CSS
+- Git
+- GitHub
+
+## How to view
+1. Clone or download this repository.
+2. Open `index.html` in a browser.
+
+## What I practised
+- Creating a local repository
+- Staging and committing changes
+- Creating and merging a branch
+- Publishing the repository to GitHub
+
+## Future improvements
+- Add a separate CSS file
+- Add accessibility checks
+- Add automated validation with GitHub Actions</code></pre>
+        <h3>Step 7 — Add a simple <code>.gitignore</code></h3>
+        <p>Create a file named <code>.gitignore</code>. For this simple HTML project, it can be small:</p>
+        <div class="command"><pre><code>.DS_Store
+Thumbs.db
+.vscode/
+*.log</code></pre></div>
+        <p>Do not ignore files the project needs. If you use a specific editor or tool, review which generated files are safe to exclude.</p>
+        <h3>Step 8 — Commit documentation and inspect the final state</h3>
+        <div class="command"><pre><code>git status
+git add README.md .gitignore
+git diff --staged
+git commit -m "Document project and ignore local files"
+git log --oneline --graph --decorate</code></pre></div>
+        <h3>Step 9 — Create the remote repository and push</h3>
+        <ol class="numbered-steps">
+          <li>Create an empty repository on GitHub, choosing public or private visibility intentionally.</li>
+          <li>Copy its HTTPS or SSH URL.</li>
+          <li>Run the commands below with your real URL.</li>
+        </ol>
+        <div class="command"><pre><code>git remote add origin https://github.com/YOUR-USERNAME/mevi-devops-starter.git
+git remote -v
+git branch -M main
+git push -u origin main</code></pre></div>
+        <p>If <code>origin</code> already exists, do not add it a second time. Check with <code>git remote -v</code> and update the URL only if needed.</p>
+        <h3>Step 10 — Verify your result</h3>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> <span><code>index.html</code> appears in the repository.</span></label></li>
+          <li><label><input type="checkbox"> <span><code>README.md</code> explains the project and how to view it.</span></label></li>
+          <li><label><input type="checkbox"> <span><code>.gitignore</code> is present.</span></label></li>
+          <li><label><input type="checkbox"> <span>There are at least three meaningful commits.</span></label></li>
+          <li><label><input type="checkbox"> <span>The branch and latest commit appear on GitHub.</span></label></li>
+          <li><label><input type="checkbox"> <span>No secrets or unwanted files were pushed.</span></label></li>
+          <li><label><input type="checkbox"> <span>The repository visibility is correct.</span></label></li>
+        </ul>
+      </section>
+
+      <section id="troubleshoot" class="section-block">
+        <div class="section-kicker">Field guide</div><h2>Common errors and how to think through them</h2>
+        <div class="accordion" id="errors">
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#err1">“fatal: not a git repository”</button></h3><div id="err1" class="accordion-collapse collapse" data-bs-parent="#errors"><div class="accordion-body">You are probably outside the project folder, or the folder has not been initialised. Run <code>pwd</code>, <code>ls -la</code>, move into the correct folder with <code>cd</code>, and check <code>git status</code>. Do not run <code>git init</code> in a random parent folder.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#err2">“nothing to commit, working tree clean”</button></h3><div id="err2" class="accordion-collapse collapse" data-bs-parent="#errors"><div class="accordion-body">Git does not see a tracked-file change or staged new file. Save the file in your editor, check that you edited the correct project copy, and run <code>git status</code>. If the file is new, stage it with <code>git add filename</code>.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#err3">“rejected — fetch first” while pushing</button></h3><div id="err3" class="accordion-collapse collapse" data-bs-parent="#errors"><div class="accordion-body">The remote has commits your local branch does not contain. Inspect <code>git status</code> and <code>git log</code>, then integrate the remote history using an appropriate pull/rebase/merge workflow. Avoid force-pushing as a first response, especially on a shared branch.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#err4">“remote origin already exists”</button></h3><div id="err4" class="accordion-collapse collapse" data-bs-parent="#errors"><div class="accordion-body">A remote named <code>origin</code> is already configured. Run <code>git remote -v</code> to inspect it. If it points to the wrong repository, use <code>git remote set-url origin YOUR-REPOSITORY-URL</code> after verifying the correct URL.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#err5">“Please tell me who you are”</button></h3><div id="err5" class="accordion-collapse collapse" data-bs-parent="#errors"><div class="accordion-body">Configure commit author information with <code>git config --global user.name "Your Name"</code> and <code>git config --global user.email "you@example.com"</code>. Then retry the commit.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#err6">Merge conflict after pull or merge</button></h3><div id="err6" class="accordion-collapse collapse" data-bs-parent="#errors"><div class="accordion-body">Run <code>git status</code> to list conflicted files. Open each file, choose the correct final content, remove conflict markers, test the result, stage the resolved files and complete the merge. If you are unsure, stop and make a backup before proceeding.</div></div></div>
+        </div>
+      </section>
+
+      
+<section id="advanced" class="section-block">
+<div class="section-kicker">Level up</div><h2>Advanced DevOps — after you master the basics</h2>
+<p class="section-intro">Work through these topics in order. The goal is not to memorise tools; it is to understand the path from a source-code change to a tested, secure, observable release.</p>
+<div class="advanced-banner"><span>DELIVERY FLOW</span><h3>Code → Review → Test → Package → Deploy → Observe → Improve</h3><p>Every stage should have a clear input, output, quality gate and recovery plan.</p></div>
+<h3>1. Advanced Git workflows</h3>
+<div class="table-responsive"><table class="table"><thead><tr><th>Concept</th><th>Command</th><th>Purpose and caution</th></tr></thead><tbody>
+<tr><td>Stash</td><td><code>git stash push -m "WIP"</code></td><td>Temporarily shelve tracked edits before switching tasks. Check status first; untracked files may require <code>-u</code>.</td></tr>
+<tr><td>Re-apply work</td><td><code>git stash list</code><br><code>git stash pop</code></td><td>Review saved work before applying it. Conflicts can still occur.</td></tr>
+<tr><td>Cherry-pick</td><td><code>git cherry-pick COMMIT_ID</code></td><td>Apply a selected commit to the current branch.</td></tr>
+<tr><td>Rebase</td><td><code>git rebase main</code></td><td>Replay commits on a new base. It changes commit IDs; avoid rewriting shared history without agreement.</td></tr>
+<tr><td>Tag a release</td><td><code>git tag -a v1.0.0 -m "Release 1.0"</code></td><td>Create a named release point; publish it with <code>git push origin v1.0.0</code>.</td></tr>
+<tr><td>Find a regression</td><td><code>git bisect start</code></td><td>Binary-search history to identify which commit introduced a bug.</td></tr>
+</tbody></table></div>
+<div class="callout warning"><i class="bi bi-shield-exclamation"></i><div><b>Protect your history</b><p>Prefer <code>git revert</code> for undoing a commit already shared with teammates. Understand <code>reset</code>, <code>clean</code> and force-push before using them; they can discard work or rewrite history.</p></div></div>
+<h3>2. CI/CD pipeline: what each stage proves</h3>
+<div class="pipeline advanced-pipeline"><div><i class="bi bi-git"></i><b>Trigger</b><small>Push / pull request</small></div><i class="bi bi-arrow-right"></i><div><i class="bi bi-shield-check"></i><b>Validate</b><small>Lint / tests / scans</small></div><i class="bi bi-arrow-right"></i><div><i class="bi bi-box-seam"></i><b>Package</b><small>Versioned artifact</small></div><i class="bi bi-arrow-right"></i><div><i class="bi bi-cloud-upload"></i><b>Deploy</b><small>Staging / production</small></div><i class="bi bi-arrow-right"></i><div><i class="bi bi-activity"></i><b>Observe</b><small>Logs / metrics</small></div></div>
+<p>A green pipeline only proves the checks you actually ran. HTML validation, unit tests, integration tests, dependency scanning and a deployment smoke test answer different questions.</p>
+<h3>3. GitHub Actions example</h3>
+<p>Create <code>.github/workflows/validate.yml</code>. This basic workflow checks that the project files exist and runs on pushes and pull requests to <code>main</code>.</p>
+<div class="code-title"><span>.github/workflows/validate.yml</span><button class="copy-btn" data-copy="workflow-v2"><i class="bi bi-clipboard"></i> Copy YAML</button></div>
+<pre class="code-block"><code id="workflow-v2">name: Validate starter website
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f README.md
+      - name: Check HTML declaration
+        run: grep -qi '&lt;!doctype html&gt;' index.html</code></pre>
+<p><b>Understand the parts:</b> an event triggers a workflow; jobs run on runners; steps execute shell commands or reusable actions. Treat this as a teaching example, not a complete production pipeline.</p>
+<div class="callout info"><i class="bi bi-lock"></i><div><b>Workflow security</b><p>Use least-privilege permissions, keep secrets out of source code and logs, and do not expose privileged secrets to untrusted pull-request code. Review third-party actions before using them.</p></div></div>
+<h3>4. Deployment strategies</h3>
+<div class="table-responsive"><table class="table"><thead><tr><th>Strategy</th><th>How it works</th><th>Trade-off</th></tr></thead><tbody>
+<tr><td>Rolling</td><td>Replace instances gradually.</td><td>Old and new versions may coexist temporarily.</td></tr>
+<tr><td>Blue-green</td><td>Run two environments and switch traffic.</td><td>Fast switch, but needs extra capacity and data compatibility.</td></tr>
+<tr><td>Canary</td><td>Send a small amount of traffic to the new version first.</td><td>Reduces blast radius but requires useful metrics and traffic controls.</td></tr>
+<tr><td>Feature flags</td><td>Deploy code while controlling who sees the feature.</td><td>Useful for gradual exposure; remove stale flags.</td></tr>
+</tbody></table></div>
+<h3>5. What comes after GitHub?</h3>
+<div class="row g-3">
+<div class="col-md-6"><div class="mini-card"><i class="bi bi-box-seam"></i><b>Docker</b><p>Learn images, containers, ports, volumes and networks.</p><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Official Docker guide ↗</a></div></div>
+<div class="col-md-6"><div class="mini-card"><i class="bi bi-file-earmark-code"></i><b>Infrastructure as Code</b><p>Define infrastructure in reviewable, repeatable configuration.</p><a href="https://developer.hashicorp.com/terraform/tutorials" target="_blank" rel="noopener">Terraform tutorials ↗</a></div></div>
+<div class="col-md-6"><div class="mini-card"><i class="bi bi-activity"></i><b>Observability</b><p>Use logs, metrics and traces to understand system health.</p><a href="https://opentelemetry.io/docs/" target="_blank" rel="noopener">OpenTelemetry docs ↗</a></div></div>
+<div class="col-md-6"><div class="mini-card"><i class="bi bi-speedometer2"></i><b>SRE and delivery metrics</b><p>Learn deployment frequency, lead time, change failure rate and recovery time.</p><a href="https://sre.google/books/" target="_blank" rel="noopener">Google SRE books ↗</a></div></div>
+</div>
+</section>
+
+<section id="resources" class="section-block">
+<div class="section-kicker">Visual references</div><h2>Image links and official resources</h2>
+<p class="section-intro">DevOps diagrams can be generated later. These cards are temporary external image references; replace them with custom Mevi-branded diagrams when ready.</p>
+<div class="resource-image-grid">
+<article class="resource-image-card"><img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Cloud and DevOps technology visual" loading="lazy"><div><span>PLACEHOLDER</span><h3>DevOps lifecycle</h3><p>Future custom image: Plan, Code, Build, Test, Release, Deploy, Operate and Monitor.</p><a href="https://docs.github.com/en/actions/get-started/understand-github-actions" target="_blank" rel="noopener">CI/CD overview ↗</a></div></article>
+<article class="resource-image-card"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Server racks representing Linux and operations" loading="lazy"><div><span>PLACEHOLDER</span><h3>Linux and terminal</h3><p>Future custom image: terminal commands, paths, variables and networking.</p><a href="https://ubuntu.com/tutorials/command-line-for-beginners" target="_blank" rel="noopener">Command-line tutorial ↗</a></div></article>
+<article class="resource-image-card"><img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Software development workspace" loading="lazy"><div><span>PLACEHOLDER</span><h3>Git workflow</h3><p>Future custom image: working tree, staging area, commits and branches.</p><a href="https://git-scm.com/book/en/v2" target="_blank" rel="noopener">Pro Git book ↗</a></div></article>
+<article class="resource-image-card"><img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Collaborative software development visual" loading="lazy"><div><span>PLACEHOLDER</span><h3>GitHub collaboration</h3><p>Future custom image: clone, push, pull request, review and merge.</p><a href="https://docs.github.com/en/repositories" target="_blank" rel="noopener">GitHub repository docs ↗</a></div></article>
+</div>
+<h3>Trusted documentation</h3>
+<div class="resource-list">
+<a href="https://git-scm.com/book/en/v2" target="_blank" rel="noopener"><i class="bi bi-book"></i><span><b>Pro Git</b><small>Git fundamentals through advanced workflows</small></span><i class="bi bi-box-arrow-up-right"></i></a>
+<a href="https://docs.github.com/" target="_blank" rel="noopener"><i class="bi bi-github"></i><span><b>GitHub Docs</b><small>Repositories, pull requests and security</small></span><i class="bi bi-box-arrow-up-right"></i></a>
+<a href="https://docs.github.com/en/actions" target="_blank" rel="noopener"><i class="bi bi-arrow-repeat"></i><span><b>GitHub Actions</b><small>Workflows and CI/CD automation</small></span><i class="bi bi-box-arrow-up-right"></i></a>
+<a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener"><i class="bi bi-box-seam"></i><span><b>Docker</b><small>Container fundamentals</small></span><i class="bi bi-box-arrow-up-right"></i></a>
+</div>
+<div class="callout info"><i class="bi bi-image"></i><div><b>Image note</b><p>The images are external links and need internet access. They are placeholders, not custom DevOps diagrams. The content remains usable if an image link changes.</p></div></div>
+</section>
+
+<section id="glossary" class="section-block">
+        <div class="section-kicker">Quick reference</div><h2>Glossary</h2>
+        <div class="glossary-grid">
+          <div><b>Repository</b><p>A project folder tracked by Git, including its history.</p></div>
+          <div><b>Commit</b><p>A recorded snapshot with metadata and a message.</p></div>
+          <div><b>Branch</b><p>A movable name used to follow a line of development.</p></div>
+          <div><b>Merge</b><p>Combines work from another branch into the current branch.</p></div>
+          <div><b>Remote</b><p>A named connection to another repository.</p></div>
+          <div><b>Push</b><p>Sends local commits to a remote repository.</p></div>
+          <div><b>Pull</b><p>Fetches remote changes and integrates them locally.</p></div>
+          <div><b>CI</b><p>Frequent integration supported by automated validation.</p></div>
+          <div><b>Artifact</b><p>A build output or packaged item produced by a pipeline.</p></div>
+          <div><b>Pipeline</b><p>A sequence of automated steps that build, test, release or deploy software.</p></div>
+          <div><b>README</b><p>The first guide many people read to understand a repository.</p></div>
+          <div><b>Pull request</b><p>A proposal to review and integrate changes on GitHub.</p></div>
+        </div>
+      </section>
+
+      <section id="quiz" class="section-block quiz-section">
+        <div class="section-kicker">Check your understanding</div><h2>Knowledge check</h2>
+        <p>Choose one answer for each question, then select “Check answers”.</p>
+        <form id="quizForm">
+          <div class="quiz-question" data-answer="b"><p>1. What is the main purpose of DevOps?</p><label><input type="radio" name="q1" value="a"> Replace all developers with automation</label><label><input type="radio" name="q1" value="b"> Improve collaboration and reliable software delivery</label><label><input type="radio" name="q1" value="c"> Use GitHub without testing</label><small class="feedback"></small></div>
+          <div class="quiz-question" data-answer="c"><p>2. Which command shows your current directory?</p><label><input type="radio" name="q2" value="a"> <code>ls</code></label><label><input type="radio" name="q2" value="b"> <code>cd ..</code></label><label><input type="radio" name="q2" value="c"> <code>pwd</code></label><small class="feedback"></small></div>
+          <div class="quiz-question" data-answer="a"><p>3. What does <code>git add</code> do?</p><label><input type="radio" name="q3" value="a"> Selects changes for the next commit</label><label><input type="radio" name="q3" value="b"> Publishes changes to GitHub</label><label><input type="radio" name="q3" value="c"> Deletes a branch</label><small class="feedback"></small></div>
+          <div class="quiz-question" data-answer="b"><p>4. Which command records a commit?</p><label><input type="radio" name="q4" value="a"> <code>git push</code></label><label><input type="radio" name="q4" value="b"> <code>git commit</code></label><label><input type="radio" name="q4" value="c"> <code>git clone</code></label><small class="feedback"></small></div>
+          <div class="quiz-question" data-answer="c"><p>5. Which term means automatically deploying every passing change to production?</p><label><input type="radio" name="q5" value="a"> Version control</label><label><input type="radio" name="q5" value="b"> Continuous Delivery only</label><label><input type="radio" name="q5" value="c"> Continuous Deployment</label><small class="feedback"></small></div>
+          <div class="quiz-question" data-answer="a"><p>6. What does <code>git diff --staged</code> show?</p><label><input type="radio" name="q6" value="a"> Changes selected for the next commit</label><label><input type="radio" name="q6" value="b"> All GitHub users</label><label><input type="radio" name="q6" value="c"> Network routes</label><small class="feedback"></small></div>
+          <div class="quiz-question" data-answer="b"><p>7. What is a pull request used for?</p><label><input type="radio" name="q7" value="a"> Delete a repository automatically</label><label><input type="radio" name="q7" value="b"> Propose, review and discuss changes</label><label><input type="radio" name="q7" value="c"> Set an environment variable</label><small class="feedback"></small></div>
+          <div class="quiz-question" data-answer="c"><p>8. Which command is generally a safer way to undo a shared commit?</p><label><input type="radio" name="q8" value="a"> <code>git reset --hard</code></label><label><input type="radio" name="q8" value="b"> <code>rm -rf .git</code></label><label><input type="radio" name="q8" value="c"> <code>git revert COMMIT_ID</code></label><small class="feedback"></small></div>
+          <button class="btn btn-primary mt-3" type="submit">Check answers</button>
+          <button class="btn btn-outline-secondary mt-3" type="reset" id="resetQuiz">Try again</button>
+          <div id="quizResult" class="quiz-result mt-3" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <section class="section-block next-steps">
+        <div class="section-kicker">After this module</div><h2>What to learn next</h2>
+        <div class="row g-3">
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-github"></i><b>GitHub Actions</b><p>Create a workflow that checks HTML on every push and pull request.</p></div></div>
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-box-seam"></i><b>Docker fundamentals</b><p>Learn images, containers, Dockerfiles and repeatable environments.</p></div></div>
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-cloud"></i><b>Cloud deployment</b><p>Deploy a static site and learn environment configuration and access control.</p></div></div>
+          <div class="col-md-6"><div class="mini-card"><i class="bi bi-activity"></i><b>Monitoring and reliability</b><p>Read logs, understand health checks and practise responding to failed releases.</p></div></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+<footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><div><img class="footer-logo" src="https://www.mevitechnologies.com/static/img/MeviLOGO.png" alt="Mevi Technologies logo"><p>Training | Development | Consultancy</p></div><div>DevOps • Linux • Git • GitHub <span>Learning notes for classroom and self-study</span></div></div></footer>
+<button id="topButton" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
