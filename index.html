@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Beginner-to-professional learning notes on DevOps, Linux, Git, and GitHub by Mevi Technologies.">
-  <title>DevOps, Linux, Git & GitHub | Mevi Technologies</title>
+  <meta name="description" content="Detailed beginner-to-advanced DevOps roadmap covering Linux, networking, scripting, Git, cloud, Docker, CI/CD, IaC, Kubernetes and observability by Mevi Technologies.">
+  <title>Complete DevOps Roadmap & Detailed Notes | Mevi Technologies</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -12,14 +12,14 @@
 <body data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-smooth-scroll="true" tabindex="0">
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#top"><img class="mevi-logo" src="https://www.mevitechnologies.com/static/img/MeviLOGO.png" alt="Mevi Technologies logo"><span class="brand-caption">Mevi Technologies<small>TRAINING | DEVELOPMENT | CONSULTANCY</small></span></a>
+    <a class="navbar-brand fw-bold" href="#top"><img class="mevi-logo" src="https://www.mevitechnologies.com/static/img/MeviLOGO.png" alt="Mevi Technologies logo"><span class="brand-caption">Mevi Technologies <small>TRAINING | DEVELOPMENT | CONSULTANCY</small></span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#devops">DevOps</a></li>
         <li class="nav-item"><a class="nav-link" href="#linux">Linux & Bash</a></li>
         <li class="nav-item"><a class="nav-link" href="#git">Git</a></li>
-        <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li><li class="nav-item"><a class="nav-link" href="#advanced">Advanced</a></li><li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+        <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li><li class="nav-item"><a class="nav-link" href="#roadmap10">Complete Roadmap</a></li><li class="nav-item"><a class="nav-link" href="#advanced">Advanced</a></li><li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
         <li class="nav-item"><a class="nav-link" href="#project">Hands-on project</a></li>
         <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
       </ul>
@@ -33,7 +33,7 @@
       <div class="col-lg-8">
         <span class="eyebrow"><i class="bi bi-mortarboard"></i> Practical learning path</span>
         <h1>DevOps, Linux, <span>Git & GitHub</span></h1>
-        <p class="lead">Start from the basics, then progress to advanced Git, CI/CD, secure automation, release strategies and production-minded DevOps.</p>
+        <p class="lead">A complete beginner-to-advanced roadmap: Linux, networking, scripting, Git, cloud, containers, CI/CD, Infrastructure as Code, Kubernetes, monitoring and production-minded DevOps.</p>
         <p class="hero-note"><i class="bi bi-lightbulb"></i> Learn the “why”, understand the command, practise it safely, and know how to recover when something goes wrong.</p>
         <div class="d-flex flex-wrap gap-2 mt-4">
           <a class="btn btn-primary btn-lg" href="#devops">Start learning <i class="bi bi-arrow-down-right"></i></a>
@@ -104,12 +104,7 @@ b7c11d0 Create starter page</code></pre>
 
       <section id="devops" class="section-block">
         <div class="section-kicker">Module 01</div><h2>Introduction to DevOps</h2>
-        <p class="section-intro">DevOps is a way of working that brings software development and IT operations together so teams can deliver changes faster, more safely and more consistently. It combines people, processes, automation, measurement and continuous feedback across the software delivery lifecycle.</p>
-        <figure class="devops-visual devops-visual-primary">
-          <img src="assets/devops-lifecycle-simple.png" alt="DevOps infinity loop showing plan, code, build, test, release, deploy, operate and monitor" loading="lazy">
-          <figcaption><strong>DevOps lifecycle at a glance.</strong> Plan, code, build, test, release, deploy, operate and monitor form a continuous improvement loop.</figcaption>
-        </figure>
-        <div class="callout info"><i class="bi bi-lightbulb"></i><div><b>Key idea</b><p>DevOps is not a single tool or job title. It is a collaborative culture supported by automation, shared ownership, fast feedback and reliable processes.</p></div></div>
+        <p class="section-intro">DevOps is a way of working that brings software development and IT operations together so teams can deliver changes faster, more safely and more consistently.</p>
         <div class="analogy">
           <div class="analogy-icon"><i class="bi bi-building-gear"></i></div>
           <div><span>Real-life analogy</span><h3>A restaurant that serves reliably</h3><p>Chefs create a dish (development), the kitchen team prepares the station and equipment (operations), quality checks verify the dish, and customer feedback improves the next version. If these groups never communicate, orders are late and mistakes increase. DevOps connects the whole process.</p></div>
@@ -132,27 +127,7 @@ b7c11d0 Create starter page</code></pre>
         </div>
         <h3>DevOps is not just a tool</h3>
         <p>Installing Git, Docker or a CI server does not automatically create DevOps. Tools support the work, but culture, clear processes, useful automation, measurable outcomes and learning from incidents matter just as much.</p>
-        <h3>DevOps tools and the wider ecosystem</h3>
-        <p>Real-world DevOps uses different tools for different jobs. A team may choose one tool from each category—or use a managed platform that combines several capabilities. Tool selection depends on team skills, existing systems, security needs, cost and operational complexity.</p>
-        <div class="tool-image-grid">
-          <figure class="devops-visual tool-visual-card">
-            <img src="assets/devops-toolchain-infinity.png" alt="DevOps infinity lifecycle connected to GitLab, Git, AWS, Docker, Kubernetes, Azure, Jenkins, Grafana, Ansible, Chef and Gradle" loading="lazy">
-            <figcaption><strong>Tools mapped to the lifecycle.</strong> Examples include Git and GitLab for source control, Gradle and Nexus for build and artifact management, Jenkins for automation, Docker and Kubernetes for containers, AWS and Azure for cloud, Ansible and Chef for configuration, and Grafana for observability.</figcaption>
-          </figure>
-          <figure class="devops-visual tool-visual-card">
-            <img src="assets/devops-tools-ecosystem.png" alt="DevOps tool ecosystem infographic showing planning, collaboration, source control, CI/CD, cloud, deployment and monitoring tools" loading="lazy">
-            <figcaption><strong>A broader DevOps ecosystem.</strong> Planning and collaboration tools (Jira, Trello, Slack), CI/CD tools (Jenkins, TeamCity, CircleCI), cloud platforms (AWS, Azure, Google Cloud), deployment and infrastructure tools (Terraform, Ansible, Puppet), and monitoring tools (Prometheus, Grafana, New Relic, Nagios) support different parts of delivery.</figcaption>
-          </figure>
-        </div>
-        <div class="callout info"><i class="bi bi-diagram-3"></i><div><b>How the tools work together</b><p>A developer pushes code to GitHub. A CI workflow runs tests and security checks, builds a versioned artifact or container image, and deploys it to a test environment. After approval, the same version can be promoted to production. Logs, metrics and alerts help the team detect problems and improve the next release.</p></div></div>
-        <h3>Modern DevOps: practices to know</h3>
-        <div class="row g-3 modern-practices">
-          <div class="col-md-6"><div class="mini-card"><i class="bi bi-shield-lock"></i><b>DevSecOps</b><p>Integrate dependency, secret, code and container scanning into the delivery workflow; keep credentials out of source code.</p></div></div>
-          <div class="col-md-6"><div class="mini-card"><i class="bi bi-boxes"></i><b>Infrastructure as Code</b><p>Describe infrastructure in version-controlled configuration using tools such as Terraform, then review and apply changes deliberately.</p></div></div>
-          <div class="col-md-6"><div class="mini-card"><i class="bi bi-box-seam"></i><b>Containers and orchestration</b><p>Package applications consistently with Docker and manage rollout, scaling and service discovery with Kubernetes where appropriate.</p></div></div>
-          <div class="col-md-6"><div class="mini-card"><i class="bi bi-graph-up-arrow"></i><b>Observability and SRE</b><p>Use metrics, logs and traces to understand service health; define service-level indicators and objectives for important user journeys.</p></div></div>
-        </div>
-        <div class="callout warning"><i class="bi bi-exclamation-triangle"></i><div><b>Important distinction</b><p>DevOps is not the same as “developers do operations” or “operations disappear.” It is a collaborative approach with shared goals and clear ownership.</p></div></div><i class="bi bi-exclamation-triangle"></i><div><b>Important distinction</b><p>DevOps is not the same as “developers do operations” or “operations disappear.” It is a collaborative approach with shared goals and clear ownership.</p></div></div>
+        <div class="callout warning"><i class="bi bi-exclamation-triangle"></i><div><b>Important distinction</b><p>DevOps is not the same as “developers do operations” or “operations disappear.” It is a collaborative approach with shared goals and clear ownership.</p></div></div>
       </section>
 
       <section id="lifecycle" class="section-block">
@@ -585,6 +560,437 @@ git push -u origin main</code></pre></div>
       </section>
 
       
+
+<section id="roadmap10" class="section-block roadmap-full">
+  <div class="section-kicker">Complete roadmap • Beginner to production</div>
+  <h2>DevOps Roadmap: 10 Steps Explained in Detail</h2>
+  <p class="section-intro">These notes expand the topics in your reference images into a practical learning sequence. Follow each step in order: understand the terms, practise the commands in a safe environment, then connect the step to the next stage of delivery.</p>
+  <div class="callout info"><i class="bi bi-signpost-split"></i><div><b>How to study each step</b><p>Read the definition → understand the workflow → try the example → check the result → complete the practice task. Tools are examples, not mandatory choices; select tools that fit the project and team.</p></div></div>
+
+  <div class="roadmap-image-panel">
+    <h3>DevOps at a glance</h3>
+    <p>The loop below represents continuous collaboration: plan, code, build, test, release, deploy, operate and monitor. Feedback from production informs the next plan.</p>
+    <img src="devops-infinity-loop.png" alt="DevOps infinity loop showing development and operations stages" loading="lazy">
+    <div class="tool-image-pair">
+      <figure><img src="devops-tools-ecosystem.png" alt="DevOps tools ecosystem overview" loading="lazy"><figcaption>Tools across the DevOps lifecycle</figcaption></figure>
+      <figure><img src="devops-tool-map.png" alt="DevOps tools connected to lifecycle stages" loading="lazy"><figcaption>Examples of tools mapped to stages</figcaption></figure>
+    </div>
+  </div>
+
+  <article class="roadmap-step" id="step-linux">
+    <div class="step-number">STEP 01</div><h3>Linux Fundamentals and Bash</h3>
+    <p><b>Goal:</b> comfortably navigate a machine, inspect files, run programs and understand basic permissions. Linux is widely used on servers and cloud virtual machines. Bash is a command-line shell that reads and executes commands.</p>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>Terminal</dt><dd>The application window where you interact with a command-line shell.</dd>
+      <dt>Shell</dt><dd>The program that interprets commands, expands variables and starts processes. Bash is one shell; Zsh and PowerShell are others.</dd>
+      <dt>CLI</dt><dd>Command-line interface: interaction by typing commands rather than clicking graphical controls.</dd>
+      <dt>Path</dt><dd>The address of a file or directory. An absolute path begins at the filesystem root; a relative path is interpreted from the current directory.</dd>
+      <dt>Process</dt><dd>A running instance of a program with a process ID (PID).</dd>
+      <dt>Permission</dt><dd>Rules controlling who can read, write or execute a file.</dd>
+      <dt>Package manager</dt><dd>A tool that installs, updates and removes software with dependency handling, such as <code>apt</code> on Debian/Ubuntu.</dd>
+    </dl>
+    <h4>Sub-step A — inspect your location and files</h4>
+    <pre class="code-block"><code>pwd                 # print the current directory
+ls                  # list visible files
+ls -la              # include hidden files and details
+cd ~/projects       # move to a directory (if it exists)
+cd ..               # move one level up
+mkdir devops-lab    # create a practice directory
+cd devops-lab</code></pre>
+    <p><b>Read the output:</b> <code>pwd</code> tells you where relative paths will start. <code>ls -la</code> shows hidden entries such as <code>.git</code>. A name beginning with a dot is commonly hidden in Unix-like systems.</p>
+    <h4>Sub-step B — create, read, copy and search files</h4>
+    <pre class="code-block"><code>touch notes.txt
+echo "Learning DevOps step by step" > notes.txt
+cat notes.txt
+cp notes.txt notes-backup.txt
+mv notes-backup.txt notes-copy.txt
+grep -n "DevOps" notes.txt
+find . -name "*.txt"</code></pre>
+    <p><code>&gt;</code> replaces a file's contents; <code>&gt;&gt;</code> appends. Use them carefully. <code>grep</code> searches text, while <code>find</code> searches directory trees for matching paths.</p>
+    <h4>Sub-step C — understand permissions and processes</h4>
+    <pre class="code-block"><code>ls -l script.sh
+chmod u+x script.sh       # give the owner execute permission
+ps                      # show processes associated with this terminal
+ps aux                  # detailed process list on many Linux systems
+top                     # interactive process/resource view</code></pre>
+    <p>In a permission string such as <code>-rwxr-xr--</code>, the first group is the owner, the second group is the group, and the last group is everyone else. Avoid using <code>chmod 777</code> as a routine fix: it grants broad permissions.</p>
+    <h4>Sub-step D — install software and edit text</h4>
+    <pre class="code-block"><code>sudo apt update
+sudo apt install curl
+curl --version
+nano notes.txt</code></pre>
+    <p><code>sudo</code> runs a command with elevated privileges. Only use it for a task that requires it and that you understand. Package commands vary by distribution: <code>apt</code> is common on Ubuntu/Debian; <code>dnf</code> is common on Fedora/RHEL-family systems.</p>
+    <div class="practice-task"><b>Practice task:</b> create a <code>devops-lab</code> folder, write a file, copy it, search for a word, inspect permissions and explain each command aloud.</div>
+  </article>
+
+  <article class="roadmap-step" id="step-network">
+    <div class="step-number">STEP 02</div><h3>Networking and Security Concepts</h3>
+    <p><b>Goal:</b> understand how a client reaches an application, how names resolve to addresses, and how to troubleshoot common connectivity problems.</p>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>IP address</dt><dd>A numeric address used to identify an interface on an IP network. IPv4 looks like <code>192.0.2.10</code>; IPv6 uses a longer hexadecimal form.</dd>
+      <dt>Subnet/CIDR</dt><dd>A way to describe a network range, such as <code>192.168.1.0/24</code>. The prefix length indicates how many leading bits identify the network.</dd>
+      <dt>DNS</dt><dd>Domain Name System translates names such as <code>example.com</code> into records including IP addresses.</dd>
+      <dt>TCP</dt><dd>A connection-oriented transport protocol that provides ordered, reliable byte delivery.</dd>
+      <dt>UDP</dt><dd>A connectionless transport protocol with lower overhead but no built-in guarantee of delivery or ordering.</dd>
+      <dt>HTTP / HTTPS</dt><dd>HTTP is used for web communication. HTTPS protects HTTP traffic using TLS encryption and server identity validation.</dd>
+      <dt>SSH</dt><dd>Secure Shell supports encrypted remote login and secure command execution; it is also commonly used for Git authentication.</dd>
+      <dt>Port</dt><dd>A number that identifies a service endpoint on a host, for example 22 for SSH by convention and 443 for HTTPS by convention.</dd>
+      <dt>Firewall</dt><dd>A control that allows or blocks network traffic based on rules.</dd>
+      <dt>Proxy / Load balancer</dt><dd>A proxy forwards requests on behalf of a client or server. A load balancer distributes requests across multiple backend instances.</dd>
+    </dl>
+    <h4>Sub-step A — trace a basic web request</h4>
+    <ol><li>You enter a domain name in the browser.</li><li>DNS resolution finds the destination address.</li><li>The client establishes the required transport connection.</li><li>For HTTPS, TLS negotiates encryption and validates the server certificate.</li><li>The browser sends an HTTP request to the service.</li><li>The server returns a response; logs and metrics help diagnose errors.</li></ol>
+    <h4>Sub-step B — test connectivity in a safe way</h4>
+    <pre class="code-block"><code>ping example.com
+nslookup example.com
+# or, where installed:
+dig example.com
+curl -I https://example.com
+traceroute example.com
+# macOS may use traceroute; Linux tools vary by distribution
+ip addr
+ip route</code></pre>
+    <p><b>Interpretation:</b> DNS lookup checks name resolution; <code>curl -I</code> requests response headers; <code>ip route</code> displays routing information. A failed ping alone does not prove a website is down because ICMP may be blocked.</p>
+    <h4>Sub-step C — troubleshoot by layer</h4>
+    <ul><li><b>Name:</b> does DNS resolve to the expected address?</li><li><b>Route:</b> does the machine have a network route?</li><li><b>Port:</b> is the service listening and is the port allowed through firewalls?</li><li><b>Protocol:</b> is the client using HTTP vs HTTPS correctly?</li><li><b>Application:</b> inspect response status, application logs and service health.</li></ul>
+    <div class="callout warning"><i class="bi bi-shield-lock"></i><div><b>Security basics</b><p>Use HTTPS, least-privilege access, strong authentication, timely updates and restrictive firewall rules. Never scan systems you do not own or have explicit permission to test. Wireshark is a packet-analysis tool; capture only traffic you are authorised to inspect.</p></div></div>
+    <div class="practice-task"><b>Practice task:</b> resolve a public domain, inspect HTTPS response headers, identify the IP configuration on your own machine and write down which layer you would investigate for a DNS failure versus a connection timeout.</div>
+  </article>
+
+  <article class="roadmap-step" id="step-scripting">
+    <div class="step-number">STEP 03</div><h3>Scripting and Automation Languages</h3>
+    <p><b>Goal:</b> turn repeated manual work into repeatable, understandable scripts. Scripting is valuable for file operations, checks, data transformation, deployment steps and scheduled maintenance.</p>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>Script</dt><dd>A text file containing instructions that a shell or interpreter executes.</dd>
+      <dt>Interpreter</dt><dd>A program that runs source code, such as the Python interpreter.</dd>
+      <dt>Variable</dt><dd>A named place to hold a value that can be reused.</dd>
+      <dt>Condition</dt><dd>A decision such as <code>if</code> that chooses which commands run.</dd>
+      <dt>Loop</dt><dd>A construct that repeats commands for a sequence or while a condition is true.</dd>
+      <dt>Exit code</dt><dd>A status number returned by a process; zero conventionally means success and non-zero commonly indicates failure.</dd>
+      <dt>Idempotency</dt><dd>A key automation property: repeating an operation should leave the system in the same intended state rather than creating duplicate or harmful effects.</dd>
+    </dl>
+    <h4>Sub-step A — start with a Bash script</h4>
+    <pre class="code-block"><code>#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Starting validation"
+if [ -f "index.html" ]; then
+  echo "index.html exists"
+else
+  echo "index.html is missing" >&2
+  exit 1
+fi
+echo "Validation completed"</code></pre>
+    <p>Save as <code>check-site.sh</code>, then run <code>chmod +x check-site.sh</code> and <code>./check-site.sh</code>. The shebang selects the interpreter. <code>set -euo pipefail</code> makes many common failures easier to catch, though scripts still need thoughtful error handling.</p>
+    <h4>Sub-step B — automate with Python when logic grows</h4>
+    <pre class="code-block"><code>from pathlib import Path
+
+required_files = ["index.html", "README.md"]
+missing = [name for name in required_files if not Path(name).is_file()]
+
+if missing:
+    print("Missing files:", ", ".join(missing))
+    raise SystemExit(1)
+
+print("Project structure looks good.")</code></pre>
+    <p>Python is readable and useful for cross-platform tasks, APIs, reports and data processing. Ruby and Go are also used in automation ecosystems. Choose based on the team, environment, dependencies and task rather than assuming one language is always best.</p>
+    <h4>Sub-step C — make scripts operationally safe</h4>
+    <ul><li>Validate inputs before changing files or infrastructure.</li><li>Quote shell variables, for example <code>"$FILE"</code>, to reduce word-splitting errors.</li><li>Log what the script is doing without printing secrets.</li><li>Return meaningful exit codes so a CI pipeline can detect failure.</li><li>Test on sample data or a disposable environment first.</li><li>Document prerequisites and how to run the script.</li></ul>
+    <div class="practice-task"><b>Practice task:</b> write a script that checks for <code>index.html</code> and <code>README.md</code>, prints which files are missing, and returns a failing exit code if either is absent.</div>
+  </article>
+
+  <article class="roadmap-step" id="step-git">
+    <div class="step-number">STEP 04</div><h3>Version Control with Git</h3>
+    <p><b>Goal:</b> record project history, work on changes independently and combine work safely. Git is a distributed version-control system; GitHub is a hosting and collaboration platform that can store Git repositories.</p>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>Working tree</dt><dd>The files you currently see and edit.</dd>
+      <dt>Staging area / index</dt><dd>The selection of changes prepared for the next commit.</dd>
+      <dt>Commit</dt><dd>A recorded snapshot of staged changes, identified by a hash and accompanied by author, time and message metadata.</dd>
+      <dt>Branch</dt><dd>A movable reference to a line of commits, allowing parallel work.</dd>
+      <dt>Merge</dt><dd>Integrates another branch into the current branch, sometimes creating a merge commit.</dd>
+      <dt>Rebase</dt><dd>Replays commits onto a new base to create a different history. It changes commit IDs.</dd>
+      <dt>Remote</dt><dd>A named connection to another repository, often called <code>origin</code>.</dd>
+      <dt>Merge conflict</dt><dd>A situation where Git cannot automatically reconcile competing edits; a human must decide the intended final content.</dd>
+    </dl>
+    <h4>Sub-step A — initialise and configure</h4>
+    <pre class="code-block"><code>git --version
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+mkdir devops-demo
+cd devops-demo
+git init
+git status</code></pre>
+    <p>Git configuration records commit attribution; use the email you intend to associate with your commits. <code>git init</code> creates a repository in the current directory, so confirm your location before running it.</p>
+    <h4>Sub-step B — stage, inspect and commit</h4>
+    <pre class="code-block"><code>echo "# DevOps Demo" > README.md
+git status
+git diff
+git add README.md
+git diff --staged
+git commit -m "Add project README"
+git log --oneline --decorate</code></pre>
+    <p>Think of this as a deliberate sequence: edit → inspect → stage → inspect staged changes → commit. A commit includes staged changes, not every unsaved or unstaged change in your folder.</p>
+    <h4>Sub-step C — branch and merge</h4>
+    <pre class="code-block"><code>git switch -c feature/learning-goals
+# edit README.md and add a learning-goals section
+git add README.md
+git commit -m "Add learning goals"
+git switch main
+git merge feature/learning-goals
+git log --oneline --graph --all</code></pre>
+    <p>If your initial branch is named <code>master</code>, use that name or rename it intentionally. If a merge conflict occurs, inspect <code>git status</code>, edit the conflicted files, remove conflict markers, test the result, stage the resolution and complete the merge.</p>
+    <h4>Sub-step D — compare, undo and recover</h4>
+    <pre class="code-block"><code>git diff                    # unstaged changes
+git diff --staged           # staged changes
+git restore README.md       # discard unstaged edits to this file
+git restore --staged README.md
+git revert COMMIT_ID        # create a new commit that reverses a commit</code></pre>
+    <p><b>Caution:</b> <code>git restore</code> can discard edits. <code>git reset --hard</code> can permanently remove uncommitted work. For a commit already shared with others, <code>git revert</code> is usually safer because it records a reversing commit rather than rewriting shared history.</p>
+    <div class="practice-task"><b>Practice task:</b> create a repository, make three commits, create a feature branch, merge it, inspect the graph and explain the difference between working tree, staging area and commit.</div>
+  </article>
+
+  <article class="roadmap-step" id="step-cloud">
+    <div class="step-number">STEP 05</div><h3>Cloud Fundamentals</h3>
+    <p><b>Goal:</b> understand the building blocks used to run applications without managing every physical server yourself. AWS, Microsoft Azure and Google Cloud are major cloud platforms; names and exact features differ by provider.</p>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>Cloud computing</dt><dd>On-demand access to compute, storage, networking and managed services, usually billed according to usage or capacity.</dd>
+      <dt>Virtual machine (VM)</dt><dd>A software-defined computer with its own operating system, CPU and memory allocation.</dd>
+      <dt>Object storage</dt><dd>Storage for objects/files in buckets or containers; examples include Amazon S3 and equivalent cloud services.</dd>
+      <dt>Managed database</dt><dd>A database service where the provider handles some operational tasks such as backups, patching or availability configuration.</dd>
+      <dt>IAM</dt><dd>Identity and Access Management defines identities, roles, permissions and access policies.</dd>
+      <dt>VPC / virtual network</dt><dd>A logically isolated network where you define subnets, routes and traffic controls.</dd>
+      <dt>Region / availability zone</dt><dd>A region is a geographic cloud area; availability zones are isolated locations within a region, depending on provider terminology.</dd>
+      <dt>Scalability</dt><dd>The ability to handle more or less workload by adding/removing resources or increasing/decreasing capacity.</dd>
+    </dl>
+    <h4>Sub-step A — map an application to cloud services</h4>
+    <ol><li><b>Compute:</b> choose a VM, container service or serverless runtime based on the application.</li><li><b>Storage:</b> choose object, block or file storage according to access patterns.</li><li><b>Database:</b> select a database engine and plan backups, access and recovery.</li><li><b>Networking:</b> define private/public subnets, routes and security rules.</li><li><b>Identity:</b> grant each user or workload only the permissions it needs.</li><li><b>Observability:</b> enable logs, metrics, alerts and audit events.</li></ol>
+    <h4>Sub-step B — use a cost and security checklist</h4>
+    <ul><li>Use budgets and alerts before experimenting with billable resources.</li><li>Stop or delete test resources when finished.</li><li>Do not publish cloud access keys or credentials in Git.</li><li>Prefer roles and short-lived credentials over long-lived access keys when available.</li><li>Use private networking where possible and expose only required ports.</li><li>Plan backups and test recovery rather than assuming backups are usable.</li></ul>
+    <div class="practice-task"><b>Practice task:</b> draw a small web app architecture containing a compute service, database, object storage, network boundary, IAM role and monitoring. Label which components are public and which should remain private.</div>
+  </article>
+
+  <article class="roadmap-step" id="step-docker">
+    <div class="step-number">STEP 06</div><h3>Microservices and Containers with Docker</h3>
+    <p><b>Goal:</b> package an application consistently and understand how services can be split into independently deployable components.</p>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>Virtualisation</dt><dd>Runs multiple isolated virtual machines on shared physical hardware, each commonly having its own OS kernel.</dd>
+      <dt>Container</dt><dd>An isolated process environment that shares the host kernel while packaging application files and dependencies.</dd>
+      <dt>Image</dt><dd>A versioned, usually immutable template used to create containers.</dd>
+      <dt>Dockerfile</dt><dd>A text file describing how to build an image.</dd>
+      <dt>Registry</dt><dd>A service for storing and distributing images, such as Docker Hub or a private registry.</dd>
+      <dt>Volume</dt><dd>A mechanism for persisting or sharing data beyond a container's writable layer.</dd>
+      <dt>Port mapping</dt><dd>Connects a host port to a port inside a container.</dd>
+      <dt>Microservices</dt><dd>An architecture where a system is divided into smaller services organised around responsibilities and communicating through defined interfaces.</dd>
+      <dt>Docker Compose</dt><dd>A tool for defining and running multi-container applications using a YAML configuration.</dd>
+    </dl>
+    <h4>Sub-step A — containerise a simple static website</h4>
+    <p>In a new folder create <code>index.html</code> and a file named <code>Dockerfile</code>:</p>
+    <pre class="code-block"><code>FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html
+EXPOSE 80</code></pre>
+    <p><code>FROM</code> selects a base image; <code>COPY</code> adds the website file; <code>EXPOSE</code> documents the intended container port. It does not by itself publish the port to your host.</p>
+    <h4>Sub-step B — build and run</h4>
+    <pre class="code-block"><code>docker --version
+docker build -t devops-demo:1.0 .
+docker image ls
+docker run --name devops-web -d -p 8080:80 devops-demo:1.0
+docker ps
+docker logs devops-web
+docker stop devops-web
+docker rm devops-web</code></pre>
+    <p>Open <code>http://localhost:8080</code>. The mapping <code>-p 8080:80</code> maps host port 8080 to container port 80. The image tag <code>1.0</code> is a human-readable version label; avoid relying on mutable <code>latest</code> tags for controlled releases.</p>
+    <h4>Sub-step C — understand Compose</h4>
+    <pre class="code-block"><code>services:
+  web:
+    build: .
+    ports:
+      - "8080:80"</code></pre>
+    <p>Save as <code>compose.yaml</code> and run <code>docker compose up --build</code>. Use <code>docker compose down</code> to stop and remove the Compose-managed containers and network. Persistent data needs an appropriate volume.</p>
+    <h4>Containers vs virtual machines</h4>
+    <p>Containers usually start quickly and share the host kernel; VMs provide a separate guest operating system. Containers are not automatically secure: use trusted base images, keep images updated, run as a non-root user where practical, scan dependencies and avoid putting secrets in image layers.</p>
+    <div class="practice-task"><b>Practice task:</b> package your own web page, run it on port 8080, view its logs, stop it, change the page and rebuild the image.</div>
+  </article>
+
+  <article class="roadmap-step" id="step-cicd">
+    <div class="step-number">STEP 07</div><h3>CI/CD — Continuous Integration and Delivery</h3>
+    <p><b>Goal:</b> automatically validate code and make the release process repeatable. Tools shown in your reference images include Jenkins, GitHub Actions, GitLab CI/CD, CircleCI and Travis CI. Their configuration syntax differs, but the pipeline ideas are similar.</p>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>Pipeline</dt><dd>A defined sequence of steps that validates, builds, packages or deploys software.</dd>
+      <dt>Trigger</dt><dd>An event that starts a workflow, such as a push, pull request, schedule or manual action.</dd>
+      <dt>Runner / agent</dt><dd>A machine or execution environment that runs pipeline jobs.</dd>
+      <dt>Job / step</dt><dd>A job groups work on an execution environment; steps are individual actions or commands inside it.</dd>
+      <dt>Artifact</dt><dd>A produced output such as a compiled package, test report or container image.</dd>
+      <dt>Environment</dt><dd>A place to run a version, such as development, test, staging or production.</dd>
+      <dt>Gate / approval</dt><dd>A condition or human decision that must be satisfied before the pipeline proceeds.</dd>
+      <dt>Rollback</dt><dd>Returning to a previous known-good version or state. Database changes may require a separate recovery plan.</dd>
+    </dl>
+    <h4>Sub-step A — design a pipeline</h4>
+    <ol><li><b>Checkout:</b> retrieve the exact source revision.</li><li><b>Install:</b> install pinned dependencies in a repeatable environment.</li><li><b>Validate:</b> run linting, formatting and static checks.</li><li><b>Test:</b> execute unit and integration tests.</li><li><b>Build:</b> produce the deployable artifact or container image.</li><li><b>Scan:</b> check dependencies, code and images for known issues.</li><li><b>Publish:</b> store the artifact with a traceable version.</li><li><b>Deploy:</b> release to staging or production under defined controls.</li><li><b>Verify:</b> run health checks or smoke tests and watch telemetry.</li></ol>
+    <h4>Sub-step B — choose the delivery model</h4>
+    <ul><li><b>Continuous Integration:</b> integrate changes frequently and automatically validate them.</li><li><b>Continuous Delivery:</b> keep changes release-ready; production release may wait for approval.</li><li><b>Continuous Deployment:</b> automatically deploy every change that passes the defined controls.</li></ul>
+    <h4>Sub-step C — make pipelines secure</h4>
+    <ul><li>Use minimal permissions for workflow tokens and service identities.</li><li>Store credentials in an approved secret manager; do not print them in logs.</li><li>Protect production environments with approvals or policy gates when appropriate.</li><li>Pin dependencies and review third-party pipeline actions/plugins.</li><li>Keep artifacts immutable and traceable to a commit.</li><li>Test failure paths, not only the happy path.</li></ul>
+    <div class="practice-task"><b>Practice task:</b> add a GitHub Actions workflow that runs when code is pushed or a pull request is opened. First validate required files, then add a test or HTML lint step. Make one intentional mistake and observe the failed pipeline.</div>
+  </article>
+
+  <article class="roadmap-step" id="step-iac">
+    <div class="step-number">STEP 08</div><h3>Infrastructure as Code (IaC) and Configuration Management</h3>
+    <p><b>Goal:</b> define infrastructure and machine configuration as reviewable files so environments can be recreated consistently. Your reference image distinguishes provisioning from configuring.</p>
+    <div class="two-column-explainer">
+      <div><h4>Provisioning</h4><p>Create or change infrastructure resources: virtual machines, networks, subnets, databases or cloud resources.</p><p><b>Common tool:</b> Terraform. Pulumi is another option.</p></div>
+      <div><h4>Configuration management</h4><p>Configure machines and services: install packages, manage configuration files, create users and keep systems in the intended state.</p><p><b>Common tool:</b> Ansible. Puppet and Chef are alternatives.</p></div>
+    </div>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>Declarative configuration</dt><dd>Describe the desired state; the tool determines how to approach it.</dd>
+      <dt>Imperative instruction</dt><dd>Specify the exact sequence of actions to execute.</dd>
+      <dt>State file</dt><dd>Terraform's record of resources it manages and their relationship to configuration; protect it because it may contain sensitive information.</dd>
+      <dt>Plan</dt><dd>A preview of proposed infrastructure changes before they are applied.</dd>
+      <dt>Drift</dt><dd>A difference between the declared desired configuration and the real environment.</dd>
+      <dt>Idempotent task</dt><dd>A task that can be repeated without causing unintended repeated changes.</dd>
+      <dt>Inventory / playbook</dt><dd>In Ansible, inventory identifies managed hosts and a playbook describes tasks to execute.</dd>
+    </dl>
+    <h4>Sub-step A — safe Terraform workflow</h4>
+    <pre class="code-block"><code>terraform init
+terraform fmt
+terraform validate
+terraform plan
+# Review the proposed changes carefully
+terraform apply
+# When appropriate and safe for a disposable lab:
+terraform destroy</code></pre>
+    <p><code>init</code> prepares providers/modules, <code>fmt</code> formats configuration, <code>validate</code> checks configuration syntax and consistency, <code>plan</code> previews changes, and <code>apply</code> attempts to make the infrastructure match the configuration. Never run apply or destroy against a shared or production environment without the required review and authorization.</p>
+    <h4>Sub-step B — understand a basic Ansible playbook</h4>
+    <pre class="code-block"><code>---
+- name: Prepare web servers
+  hosts: web
+  become: true
+  tasks:
+    - name: Ensure nginx is installed
+      ansible.builtin.package:
+        name: nginx
+        state: present
+    - name: Ensure nginx is running
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true</code></pre>
+    <p>The play targets hosts in the <code>web</code> inventory group. <code>become: true</code> requests privilege escalation. The package and service modules express desired state rather than manually running package commands on every server.</p>
+    <h4>Sub-step C — IaC best practices</h4>
+    <ul><li>Store configuration in Git and review changes through pull requests.</li><li>Separate environments and state safely; use locking and remote state controls where supported.</li><li>Never commit credentials or secret values to version control.</li><li>Review plans before applying changes.</li><li>Use modules and variables for reuse, and pin provider/tool versions intentionally.</li><li>Test in a sandbox and document ownership, costs and destruction steps.</li></ul>
+    <div class="practice-task"><b>Practice task:</b> write a small Terraform configuration for a local or sandbox example, run format/validate/plan and explain each output. If you cannot access a cloud account, practise the workflow without creating billable resources.</div>
+  </article>
+
+  <article class="roadmap-step" id="step-kubernetes">
+    <div class="step-number">STEP 09</div><h3>Orchestration and Management with Kubernetes</h3>
+    <p><b>Goal:</b> understand how container workloads are scheduled and maintained across a cluster. Kubernetes is a container orchestration platform; it does not replace Docker image-building and it is not required for every application.</p>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>Cluster</dt><dd>A Kubernetes environment consisting of a control plane and worker nodes.</dd>
+      <dt>Control plane</dt><dd>Components that expose the API, make scheduling decisions and maintain cluster state.</dd>
+      <dt>Node</dt><dd>A machine that runs workload pods.</dd>
+      <dt>Pod</dt><dd>The smallest deployable Kubernetes unit; it can contain one or more closely related containers.</dd>
+      <dt>Deployment</dt><dd>A controller that manages replicated Pods and supports rolling updates and rollbacks.</dd>
+      <dt>Service</dt><dd>A stable network endpoint for reaching a set of Pods.</dd>
+      <dt>ConfigMap / Secret</dt><dd>Objects for configuration and sensitive values. Secrets need appropriate access controls and encryption configuration; do not assume they are safe merely because of the object type.</dd>
+      <dt>Namespace</dt><dd>A logical partition for grouping resources in a cluster.</dd>
+      <dt>Manifest</dt><dd>A YAML or JSON description of the desired resource configuration.</dd>
+      <dt>kubectl</dt><dd>The command-line client used to interact with a Kubernetes API server.</dd>
+    </dl>
+    <h4>Sub-step A — inspect the cluster</h4>
+    <pre class="code-block"><code>kubectl version --client
+kubectl config current-context
+kubectl get nodes
+kubectl get namespaces
+kubectl get pods -A</code></pre>
+    <p>Check the current context before making changes: a kubeconfig may contain multiple clusters. Commands can affect shared environments, so confirm the target context and namespace.</p>
+    <h4>Sub-step B — create a deployment manifest</h4>
+    <pre class="code-block"><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-demo
+  template:
+    metadata:
+      labels:
+        app: web-demo
+    spec:
+      containers:
+        - name: web
+          image: nginx:stable
+          ports:
+            - containerPort: 80</code></pre>
+    <p>Save as <code>deployment.yaml</code>. The selector must match the Pod template labels. <code>replicas: 2</code> asks Kubernetes to maintain two matching Pod replicas; it is a desired state, not a guarantee that every Pod is instantly healthy.</p>
+    <h4>Sub-step C — apply and verify</h4>
+    <pre class="code-block"><code>kubectl apply -f deployment.yaml
+kubectl get deployments
+kubectl get pods -l app=web-demo
+kubectl describe deployment web-demo
+kubectl logs deployment/web-demo
+kubectl rollout status deployment/web-demo
+kubectl rollout history deployment/web-demo</code></pre>
+    <h4>Sub-step D — expose the application and clean up</h4>
+    <pre class="code-block"><code>kubectl expose deployment web-demo --name=web-demo-svc --port=80 --type=ClusterIP
+kubectl get services
+kubectl port-forward service/web-demo-svc 8080:80
+# In another terminal, open http://localhost:8080
+kubectl delete service web-demo-svc
+kubectl delete deployment web-demo</code></pre>
+    <p><code>ClusterIP</code> is normally reachable inside the cluster. A <code>LoadBalancer</code> Service or Ingress/Gateway configuration may be used for external access depending on the platform. In cloud environments, some service types can create billable resources.</p>
+    <h4>Sub-step E — common operations</h4>
+    <ul><li><b>Scale:</b> adjust replicas to match expected load.</li><li><b>Rollout:</b> track deployment updates and roll back when a release fails.</li><li><b>Health probes:</b> liveness checks can restart a container; readiness checks determine whether it should receive traffic.</li><li><b>Requests and limits:</b> describe resource expectations and ceilings for CPU/memory.</li><li><b>Security:</b> use RBAC, least privilege, trusted images, restricted network policies and careful Secret handling.</li></ul>
+    <div class="practice-task"><b>Practice task:</b> deploy NGINX to a local Kubernetes cluster such as one provided by Docker Desktop or kind, inspect Pods and Deployment status, port-forward the Service, then delete the resources.</div>
+  </article>
+
+  <article class="roadmap-step" id="step-monitoring">
+    <div class="step-number">STEP 10</div><h3>Monitoring, Logging and Observability</h3>
+    <p><b>Goal:</b> determine whether a service is healthy, understand why it is failing and measure the impact of a release. Your reference notes highlight Prometheus and Grafana, with alternatives and related tools including ELK, Fluentd and AWS CloudWatch.</p>
+    <h4>Terminology explained</h4>
+    <dl class="term-list">
+      <dt>Monitoring</dt><dd>Collecting known health signals and alerting when defined conditions are met.</dd>
+      <dt>Observability</dt><dd>The ability to infer internal system state from emitted outputs, commonly logs, metrics and traces.</dd>
+      <dt>Metric</dt><dd>A numerical measurement over time, such as request rate, error rate, latency or memory usage.</dd>
+      <dt>Log</dt><dd>A timestamped event record describing what happened.</dd>
+      <dt>Trace</dt><dd>A representation of a request's journey across services, often made of related spans.</dd>
+      <dt>Dashboard</dt><dd>A visual view of important signals and their trends.</dd>
+      <dt>Alert</dt><dd>A notification generated when a condition or symptom needs attention.</dd>
+      <dt>SLI / SLO / SLA</dt><dd>An SLI is a measured indicator; an SLO is a target for that indicator; an SLA is a formal service-level agreement that may include consequences.</dd>
+      <dt>Error budget</dt><dd>The tolerated unreliability implied by an SLO over a defined period.</dd>
+    </dl>
+    <h4>Sub-step A — understand the common tools</h4>
+    <div class="table-responsive"><table class="table align-middle"><thead><tr><th>Tool/category</th><th>Main role</th><th>Example use</th></tr></thead><tbody>
+      <tr><td>Prometheus</td><td>Metrics collection and querying</td><td>Track request rates, latency histograms and resource usage.</td></tr>
+      <tr><td>Grafana</td><td>Dashboards and visualisation</td><td>Display metrics from configured data sources and explore trends.</td></tr>
+      <tr><td>ELK / Elastic Stack</td><td>Centralised log search and analysis</td><td>Search logs from multiple services in one place.</td></tr>
+      <tr><td>Fluentd</td><td>Log collection and routing</td><td>Forward and transform logs between sources and destinations.</td></tr>
+      <tr><td>AWS CloudWatch</td><td>Cloud monitoring and logs</td><td>Inspect supported AWS resource metrics, logs and alarms.</td></tr>
+      <tr><td>OpenTelemetry</td><td>Vendor-neutral telemetry instrumentation and collection</td><td>Produce and export traces, metrics and logs to supported backends.</td></tr>
+    </tbody></table></div>
+    <h4>Sub-step B — use the four golden signals as a starting point</h4>
+    <ul><li><b>Latency:</b> how long requests take, ideally measured with percentiles such as p95/p99.</li><li><b>Traffic:</b> how much demand the service receives.</li><li><b>Errors:</b> the rate of failed or incorrect requests.</li><li><b>Saturation:</b> how close a constrained resource is to its capacity.</li></ul>
+    <h4>Sub-step C — respond to an alert</h4>
+    <ol><li>Confirm whether users are affected and assess severity.</li><li>Check recent deployments and configuration changes.</li><li>Compare error rate, latency, traffic and resource metrics.</li><li>Inspect correlated logs and traces for the failing path.</li><li>Mitigate safely: rollback, scale, disable a feature or route traffic if the runbook permits.</li><li>Verify recovery, communicate status and record the timeline.</li><li>Conduct a blameless review and create actions to prevent recurrence.</li></ol>
+    <h4>Sub-step D — avoid noisy or unsafe monitoring</h4>
+    <ul><li>Alert on user impact and actionable symptoms rather than every minor fluctuation.</li><li>Protect logs from leaking passwords, tokens, personal data or other secrets.</li><li>Use retention and access policies appropriate to the data.</li><li>Test alert delivery and recovery procedures; an alert that nobody receives is not useful.</li><li>Track deployment frequency, lead time for changes, change failure rate and time to restore service as complementary delivery measures.</li></ul>
+    <div class="practice-task"><b>Practice task:</b> write a mini incident report for a web app whose error rate rises after deployment. Include impact, evidence to inspect, immediate mitigation, recovery verification and one prevention action.</div>
+  </article>
+
+
+
+  <div class="callout success"><i class="bi bi-check-circle"></i><div><b>End-to-end understanding</b><p>A practical DevOps engineer can navigate a server, diagnose connectivity, automate a check, version the code, provision infrastructure safely, build a container, validate it in CI/CD, orchestrate it where needed, and use telemetry to verify the release.</p></div></div>
+</section>
+
 <section id="advanced" class="section-block">
 <div class="section-kicker">Level up</div><h2>Advanced DevOps — after you master the basics</h2>
 <p class="section-intro">Work through these topics in order. The goal is not to memorise tools; it is to understand the path from a source-code change to a tested, secure, observable release.</p>
